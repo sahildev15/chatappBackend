@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",          // ✅ Use CommonJS instead of ESNext
+    "target": "ES2017",            // or "ES2020" is fine
+    "moduleResolution": "node",    // ✅ Ensure Node-style resolution
+    "esModuleInterop": true,       // ✅ For default imports to work
+    "baseUrl": ".",                
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "allowJs": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+  "strictNullChecks": false
+  }
+,
+  "exclude": [
+    "config/db.js"
+  ]
+}
