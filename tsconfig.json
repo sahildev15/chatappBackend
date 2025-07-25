@@ -1,20 +1,18 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",          // ✅ Use CommonJS instead of ESNext
-    "target": "ES2017",            // or "ES2020" is fine
-    "moduleResolution": "node",    // ✅ Ensure Node-style resolution
-    "esModuleInterop": true,       // ✅ For default imports to work
-    "baseUrl": ".",                
+    "module": "CommonJS",
+    "target": "ES2017",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "allowJs": true,
+    "outDir": "dist",                    // ✅ Required
     "noImplicitAny": false,
-    "skipLibCheck": true,
-  "strictNullChecks": false
-  }
-,
-  "exclude": [
-    "config/db.js"
-  ]
+    "strictNullChecks": false,
+    "skipLibCheck": true
+  },
+  "include": ["server.ts", "routes/**/*.ts", "models/**/*.ts"],
+  "exclude": ["node_modules", "config/db.js"]
 }
